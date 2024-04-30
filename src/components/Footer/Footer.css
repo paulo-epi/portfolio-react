@@ -1,0 +1,34 @@
+.footer {
+  display: block;
+  background-color: #1b1f24;
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important ;
+  text-align: center;
+}
+
+.footer h3 {
+  font-size: 1em;
+  color: white !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+.footer .footer-icons {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .icons:first-child {
+  margin-right: 1.5rem;
+}
+
+.footer .footer-icons .icons {
+  color: white;
+}
+
+.footer .footer-icons .icons:hover {
+  color: rgb(193, 193, 193);
+}

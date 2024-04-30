@@ -1,0 +1,108 @@
+.background-section {
+  background-color: #1b1f24;
+  color: #fff;
+}
+
+.background-content {
+  padding: 8rem 0 8rem !important;
+  color: whitesmoke;
+  text-align: left;
+}
+
+.left-section {
+  margin-bottom: 0rem;
+}
+
+.left-section p {
+  margin-bottom: 2rem;
+}
+
+.left-section a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.right-section .stats-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.right-section .stat {
+  display: flex;
+  align-items: center;
+}
+
+.right-section .number {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.right-section .description {
+  font-size: 1.2rem;
+  margin-right: 3rem;
+}
+
+.left-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 3.125rem;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  color: #fff;
+}
+
+.left-section a::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 0;
+  border-radius: 16px;
+  background: #ffffff;
+  bottom: 1px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-out 0s;
+}
+
+.left-section a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .right-section .stats-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .background-section {
+    padding: 0rem 2rem !important;
+  }
+
+  .background-content {
+    padding: 6rem 0 4rem !important;
+  }
+
+  .left-section a {
+    font-size: 1.1rem;
+    margin-bottom: 4rem;
+  }
+
+  .right-section .stats-container {
+    display: block;
+  }
+
+  .right-section .number {
+    font-size: 3.5rem;
+  }
+}

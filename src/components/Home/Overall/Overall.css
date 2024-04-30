@@ -1,0 +1,116 @@
+.overall-section {
+  background-color: rgb(24, 28, 29);
+  color: #fff;
+}
+
+.overall-content {
+  padding: 8rem 0 8rem !important;
+  color: whitesmoke;
+  text-align: left;
+}
+
+.left-section {
+  margin-bottom: 0rem;
+}
+
+.right-section {
+  justify-self: end;
+  align-self: center;
+  margin-bottom: 0rem;
+}
+
+.left-section h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 3.125rem;
+  text-transform: uppercase;
+}
+
+.left-section p {
+  margin-bottom: 2rem;
+}
+
+.left-section a {
+  transition: all 0.3s ease-out 0s;
+  position: relative;
+  z-index: 1;
+  width: auto;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.arrow {
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  color: #fff;
+}
+
+.left-section a::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 0;
+  border-radius: 16px;
+  background: #ffffff;
+  bottom: 1px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-out 0s;
+}
+
+.left-section a:hover::after {
+  width: 100%;
+}
+
+.primary_btn span {
+  padding: 0 2.625rem;
+}
+
+.primary_btn {
+  margin-top: 1.25rem;
+  margin-right: 1.25rem;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 0rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 2.875rem;
+  outline: none !important;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.3125rem;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(to right, #316DCA 0%, #5530C9 100%), radial-gradient(circle at top left, #316DCA, #5530C9);
+  border: double 0.125rem transparent;
+  box-shadow: 0rem 0.625rem 1.875rem rgba(118, 85, 225, 0.3);
+}
+
+.primary_btn:hover {
+  background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #316DCA, #5530C9);
+  border: 0.125rem solid #5530C9;
+  color: #222222;
+  box-shadow: none;
+  background-clip: border-box;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .overall-section {
+    padding: 0rem 2rem !important;
+  }
+
+  .overall-content {
+    padding: 6rem 0 4rem !important;
+  }
+
+  .left-section a {
+    margin-bottom: 4rem;
+  }
+}
