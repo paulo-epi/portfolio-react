@@ -5,6 +5,7 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import "./Contact.css";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,21 +34,11 @@ const Contact = () => {
     if (Object.keys(errors).length === 0) {
       try {
         // Send the form data to your backend
-        fetch('https://server-nodejs.paul-petit.fr/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: formData,
-        }).then(response => {
-          if (response.status === 200) {
-            alert("Message sent!");
-            console.log('Email sent!');
-          } else {
-            alert("Error while sending the message");
-            console.error('Email not sent!');
-          }
-        })
+        axios.post('https://server-nodejs.paul-petit.fr/send-email', formData)
+          .then(response => {
+            alert("Email Sent Successfully!");
+          })
+          .catch(error => console.log(error));
         // Optionally, reset the form after successful submission
         setFormData({
           firstName: "",
