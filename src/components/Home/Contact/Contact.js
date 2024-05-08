@@ -1,13 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiOutlineHome,
   AiOutlineMail,
 } from "react-icons/ai";
-import { LuPhone } from "react-icons/lu";
 import "./Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    from_email: "",
+    subject: "",
+    body: ""
+  });
+  const [formErrors, setFormErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const errors = {};
+    Object.keys(formData).forEach((key) => {
+      if (!formData[key]) {
+        errors[key] = "This field is required.";
+      }
+    });
+    setFormErrors(errors);
+    if (Object.keys(errors).length === 0) {
+      try {
+        // Send the form data to your backend
+        fetch('https://server-nodejs.paul-petit.fr/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: formData,
+        }).then(response => {
+          if (response.status === 200) {
+            alert("Message sent!");
+            console.log('Email sent!');
+          } else {
+            alert("Error while sending the message");
+            console.error('Email not sent!');
+          }
+        })
+        // Optionally, reset the form after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          from_email: "",
+          subject: "",
+          body: ""
+        });
+      } catch (error) {
+        console.error('Error sending email:', error);
+        // Optionally, display an error message to the user
+      }
+    }
+  };
+
   return (
     <section>
       <Container fluid className="contact-section" id="contact">
@@ -17,29 +72,95 @@ const Contact = () => {
               <h2>Contact Me</h2>
             </div>
             <Col md={7}>
-              <form action="" method="post" className="row" id="contactForm" noValidate="novalidate">
+              <form
+                className="row"
+                id="contactForm"
+                onSubmit={handleSubmit}
+                noValidate
+              >
                 <div className="name-input">
                   <div className="form-group">
-                    <input id="fname" name="name" placeholder="First Name" onFocus={() => { }} onBlur={() => { }} className="form-control" required="" type="text" />
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      placeholder="First Name"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="form-control"
+                      required
+                      type="text"
+                    />
+                    {formErrors.firstName && (
+                      <span className="error">{formErrors.firstName}</span>
+                    )}
                   </div>
                 </div>
 
                 <div className="name-input">
                   <div className="form-group">
-                    <input id="lname" name="name" placeholder="Last Name" onFocus={() => { }} onBlur={() => { }} className="form-control" required="" type="text" />
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      placeholder="Last Name"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="form-control"
+                      required
+                      type="text"
+                    />
+                    {formErrors.lastName && (
+                      <span className="error">{formErrors.lastName}</span>
+                    )}
                   </div>
                 </div>
 
                 <div className="form-group">
-                  <input id="email" name="email" placeholder="Your email address" onFocus={() => { }} onBlur={() => { }} className="form-control" required="" type="email" />
+                  <input
+                    id="from_email"
+                    name="from_email"
+                    placeholder="Your email address"
+                    value={formData.from_email}
+                    onChange={handleChange}
+                    className="form-control"
+                    required
+                    type="email"
+                  />
+                  {formErrors.from_email && (
+                    <span className="error">{formErrors.from_email}</span>
+                  )}
                 </div>
 
                 <div className="form-group">
-                  <input id="subject" name="subject" placeholder="Subject" onFocus={() => { }} onBlur={() => { }} className="form-control" required="" type="text" />
+                  <input
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="form-control"
+                    required
+                    type="text"
+                  />
+                  {formErrors.subject && (
+                    <span className="error">{formErrors.subject}</span>
+                  )}
                 </div>
 
                 <div className="form-group">
-                  <textarea id="message" className="form-control" name="message" placeholder="Message" onFocus={() => { }} onBlur={() => { }} required cols="30" rows="5"></textarea>
+                  <textarea
+                    id="body"
+                    className="form-control"
+                    name="body"
+                    placeholder="Message"
+                    value={formData.body}
+                    onChange={handleChange}
+                    required
+                    cols="30"
+                    rows="5"
+                  ></textarea>
+                  {formErrors.body && (
+                    <span className="error">{formErrors.body}</span>
+                  )}
                 </div>
                 <div className="col-lg-12">
                   <button className="primary_btn" type="submit" value="submit">
@@ -55,13 +176,6 @@ const Contact = () => {
                 <div className="info_text">
                   <h6>Dublin, Ireland</h6>
                   <p>Ossory Rd, East Wall, Dublin, D03 A038, Ireland</p>
-                </div>
-              </div>
-              <LuPhone className="info-icons" />
-              <div className="info_item">
-                <div className="info_text">
-                  <h6><a href="tel:+33675145232">+33 6 75 14 52 32</a></h6>
-                  <p>Mon to Fri 9am to 6 pm</p>
                 </div>
               </div>
               <AiOutlineMail className="info-icons" />

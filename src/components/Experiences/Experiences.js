@@ -18,8 +18,8 @@ const Experiences = () => {
             <h1>Experiences</h1>
           </Col>
           <CompanyBlockLeft
-            title="Front End Developer - Personal project"
-            subtitle=""
+            title="Full Stack Developer - Personal project"
+            subtitle="Portfolio"
             description={[
               "Design and develop a modern web application",
               "Created a feature-rich web application from scratch using cutting-edge technologies",
@@ -27,7 +27,8 @@ const Experiences = () => {
               "Designed a user-friendly and intuitive interface for a positive user experience. Ensured code maintainability, scalability, and optimal performance throughout the development process. Regularly conducted testing and debugging to ensure the application's reliability.",
               "Deployed the web application to a cloud hosting platform for accessibility.",
               "Front-End: ReactJS / React Bootstrap",
-              "Setup: Docker / Docker compose / GitHub"
+              "Back-End: Node JS",
+              "Setup: GitHub"
             ]}
             imgSrc={portfolioImg}
           />
