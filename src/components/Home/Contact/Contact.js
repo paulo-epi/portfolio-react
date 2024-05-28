@@ -34,11 +34,24 @@ const Contact = () => {
     if (Object.keys(errors).length === 0) {
       try {
         // Send the form data to your backend
-        axios.post('https://server-nodejs.paul-petit.fr/send-email', formData)
+        fetch('https://server-nodejs.paul-petit.fr/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
           .then(response => {
-            alert("Email Sent Successfully!");
+            if (response.ok) {
+              alert("Email Sent Successfully!");
+            } else {
+              throw new Error('Error sending email');
+            }
           })
-          .catch(error => console.log(error));
+          .catch(error => {
+            console.error('Error sending email:', error);
+            // Optionally, display an error message to the user
+          });
         // Optionally, reset the form after successful submission
         setFormData({
           firstName: "",
