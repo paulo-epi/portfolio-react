@@ -2,9 +2,9 @@ const nodemailer = require('nodemailer');
 let dotenv = require('dotenv').config();
 
 if (
-  process.env.EMAILSERVICE == undefined ||
-  process.env.EMAIL == undefined ||
-  process.env.PASSWORDEMAIL == undefined
+  process.env.PORT === undefined ||
+  process.env.EMAIL === undefined ||
+  process.env.PASSWORDEMAIL === undefined
 ) {
   console.log('Error: Missing email environment variables');
   process.exit(1);
@@ -27,7 +27,7 @@ function sendEmail(firstName, lastName, from_email, subject, body) {
         + body;
   let mailOptions = {
     from: from_email,
-    to: 'p.petit@paul-petit.fr',
+    to: process.env.TOEMAIL,
     subject: subject,
     text: emailBody,
   };

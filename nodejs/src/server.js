@@ -6,9 +6,20 @@ const mailRoutes = require('./routes/mail');
 
 const app = express();
 
-app.use(cors());
+const corsOpts = {
+  origin: '*',
 
-const PORT = process.env.PORT || 8000;
+  methods: [
+    'GET',
+    'POST',
+  ],
+
+  allowedHeaders: [
+    'Content-Type',
+  ],
+};
+
+app.use(cors(corsOpts));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,6 +32,4 @@ app.use((req, res) => {
   res.status(404).send('Not Found');
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
+app.listen(process.env.PORT || 3001);
