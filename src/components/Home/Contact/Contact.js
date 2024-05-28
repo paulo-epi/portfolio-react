@@ -5,7 +5,6 @@ import {
   AiOutlineMail,
 } from "react-icons/ai";
 import "./Contact.css";
-import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
