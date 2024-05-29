@@ -70,7 +70,7 @@ const NavBar = () => {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="about"
+                to="/about"
                 onClick={() => {
                   updateExpanded(false);
                   scrollToTop();
@@ -83,7 +83,7 @@ const NavBar = () => {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="experiences"
+                to="/experiences"
                 onClick={() => {
                   updateExpanded(false);
                   scrollToTop();
@@ -95,8 +95,11 @@ const NavBar = () => {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link
-                href='/#contact'
-                onClick={() => updateExpanded(false)}
+                as={Link}
+                to='/#contact'
+                onClick={() => {
+                  updateExpanded(false);
+                }}
                 style={{ marginBottom: "2px" }}
               >
                 <AiOutlineMail /> Contact

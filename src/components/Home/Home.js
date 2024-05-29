@@ -5,9 +5,6 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import TextWritter from "./TypeWritter";
-import Contact from "./Contact/Contact";
-import Overall from "./Overall/Overall";
-import Background from "./Background/Background";
 
 import aboutImg from "../../assets/images/pp.png";
 import "./Home.css";
@@ -68,9 +65,6 @@ const Home = () => {
           <img src={aboutImg} alt="Paul Petit" className="img-fluid" style={{ maxHeight: "690px" }} />
         </div>
       </Container>
-      <Overall />
-      <Background />
-      <Contact />
     </section>
   );
 };

@@ -18,12 +18,12 @@ const Background = () => {
                 creative thinking skills. Whether leading innovative projects or collaborating in dynamic teams, my career
                 path is a testament to my adaptability and commitment to excellence.
               </p>
-              <a href="about">More about my experiences <span className="arrow">→</span></a>
+              <a href="/experiences">More about my experiences <span className="arrow">→</span></a>
             </Col>
             <Col md={6} className="right-section">
               <div className="stats-container">
                 <div className="stat">
-                  <span className="number">4</span>
+                  <span className="number">5</span>
                   <span className="description">
                     Years of
                     <br />
