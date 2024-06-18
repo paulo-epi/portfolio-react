@@ -2,8 +2,9 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import PropTypes from "prop-types";
 import "./Experiences.css";
+import { AiFillGithub } from "react-icons/ai";
 
-const CompanyBlockLeft = ({ title, subtitle, description, imgSrc }) => {
+const CompanyBlockLeft = ({ title, subtitle, description, imgSrc, link }) => {
   return (
     <Row className="company-block company-block-reverse">
       <Col md={5}>
@@ -20,6 +21,16 @@ const CompanyBlockLeft = ({ title, subtitle, description, imgSrc }) => {
             <li key={item.id}>{item}</li>
           ))}
         </ul>
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="icons github-icon"
+          >
+            <AiFillGithub />
+          </a>
+        )}
       </Col>
     </Row>
   );
@@ -30,6 +41,7 @@ CompanyBlockLeft.propTypes = {
   subtitle: PropTypes.string.isRequired,
   description: PropTypes.array.isRequired,
   imgSrc: PropTypes.string.isRequired,
+  link: PropTypes.string,
 };
 
 export default CompanyBlockLeft;

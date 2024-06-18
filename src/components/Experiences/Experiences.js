@@ -31,15 +31,17 @@ const Experiences = () => {
               "Setup: GitHub"
             ]}
             imgSrc={portfolioImg}
+            link="https://github.com/paulo-epi/portfolio-react"
           />
           <CompanyBlockRight
-            title="Mobile Developer - End of studies project"
+            title="Full Stack / Mobile Developer - End of studies project"
             subtitle="Lanterne | September 2022 - Now"
             description={[
               "Create an application with an interactive map with a report button, emergency contacts and editable route filters",
               "Mock-up of mobile project with Figma",
               "iOS/Android mobile application development with Flutter",
-              "Front-End: Flutter / ReactJS",
+              "Website development with React",
+              "Front-End: Flutter / React",
               "Back-End: Node.js",
               "Setup: GitHub / Sonarqube / Jenkins / Docker",
               "Database: Firebase / Firestore"
@@ -59,18 +61,21 @@ const Experiences = () => {
             imgSrc={hardisImg}
           />
           <CompanyBlockRight
-            title="AREA - School project"
+            title="Full Stack / Mobile Developer - School project"
             subtitle="Epitech | January - February 2023"
             description={[
               "Create an application able to create action / reaction using external APIs",
               "Android mobile application development with React Native",
+              "Website development with TypeScript",
               "Developed user management modules facilitating registration and authentication processes, incorporating options for username/password authentication and OAuth2 integration",
               "Front-End: React Native / TypeScript",
               "Back-End: Python Flask",
               "Setup: Docker / Docker compose / GitHub",
-              "Database: MongoDB / SQL"
+              "Database: MongoDB / SQL",
+              "Tests: Cypress"
             ]}
             imgSrc={areaImg}
+            link="https://github.com/paulo-epi/Area-Epitech"
           />
           <CompanyBlockLeft
             title="Project Manager - Internship"

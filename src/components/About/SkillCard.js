@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const SkillCard = ({ title, img, text }) => {
   return (
-    <Col xs={12} sm={6} md={4} lg={2}>
+    <Col xs={6} sm={6} md={4} lg={2}>
       <Card className="skill">
         <div>
           <img src={img} alt={title} />

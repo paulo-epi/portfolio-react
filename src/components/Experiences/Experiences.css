@@ -78,6 +78,40 @@
   padding-left: 1rem;
 }
 
+.company-info-left a {
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.company-info-left .github-icon:hover {
+  transform: scale(1.2);
+}
+
+.company-info-left .icons {
+  color: white;
+}
+
+.company-info-left .icons:hover {
+  color: rgb(193, 193, 193);
+}
+
+.company-info a {
+  font-size: 2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.company-info .github-icon:hover {
+  transform: scale(1.2);
+}
+
+.company-info .icons {
+  color: white;
+}
+
+.company-info .icons:hover {
+  color: rgb(193, 193, 193);
+}
+
 @media screen and (max-width: 1399px) {
   .company-info-left {
     margin-left: 0;
