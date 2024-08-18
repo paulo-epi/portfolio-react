@@ -27,12 +27,11 @@ jobs:
       - name: Build React app
         run: pnpm run build
 
-      - name: Deploy to cPanel via SSH
-        uses: appleboy/ssh-action@v0.1.6
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
-          host: ${{ secrets.CPANEL_HOST }}
-          username: ${{ secrets.CPANEL_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          script: |
-            cp -vaR /build/* ~/public_html/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build/
+          server-dir: ${{ secrets.FTP_TARGET_DIR }}
