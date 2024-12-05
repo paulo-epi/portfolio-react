@@ -7,6 +7,7 @@ import hardisImg from "../../assets/logo/hardis-group.png";
 import cciImg from "../../assets/logo/cci.png";
 import areaImg from "../../assets/logo/area.png";
 import portfolioImg from "../../assets/logo/portfolio.png";
+import passInterimImg from "../../assets/logo/pass-interim.png";
 import "./Experiences.css";
 
 const Experiences = () => {
@@ -17,31 +18,49 @@ const Experiences = () => {
           <Col md={12} className="exp-header">
             <h1>Experiences</h1>
           </Col>
-          <CompanyBlockLeft
-            title="Full Stack Developer - Personal project"
-            subtitle="Portfolio"
+          <CompanyBlockRight
+            key={1}
+            title="Full-Stack Developer - 09/2024 - current"
+            subtitle="Pass interim | Dublin, Ireland (Remote)"
             description={[
-              "Design and develop a modern web application",
-              "Created a feature-rich web application from scratch using cutting-edge technologies",
-              "Developed a responsive web application with a modern user interface",
-              "Designed a user-friendly and intuitive interface for a positive user experience. Ensured code maintainability, scalability, and optimal performance throughout the development process. Regularly conducted testing and debugging to ensure the application's reliability.",
-              "Deployed the web application to a cloud hosting platform for accessibility.",
-              "Front-End: ReactJS / React Bootstrap",
-              "Back-End: Node JS",
-              "Setup: GitHub"
+              "Advanced mastery in full-stack development with Laravel and Angular, creating new features",
+              "Designed sustainable, scalable software architecture for long-term efficiency",
+              "Integrated AI via OpenAI API to optimize data processing and agency-candidate matching",
+              "Developed tools for PDF conversion, document tagging, and automated CV generation",
+              "Led project management efforts, including task estimation, team coordination, and dashboard redesign for sales teams.",
+              "Front-End: Angular",
+              "Back-End: PHP Laravel",
+              "Setup: GitLab / Deployer / php insights",
+              "Database: MariaDB / MySQL / phpMyAdmin"
+            ]}
+            imgSrc={passInterimImg}
+          />
+          <CompanyBlockLeft
+            key={2}
+            title="Full-Stack Developer - 05/2024 - Current"
+            subtitle="Freelance | Dublin, Ireland (Remote)"
+            description={[
+              "Developed responsive portfolios web app with a modern UI",
+              "Focused on intuitive user experience and optimized for SEO to improve visibility",
+              "Built using React, Next.js and TailwindCSS for efficient page loading, routing, and styling",
+              "The websites were deployed on the cloud for easy accessibility with a robust backend in Node.js and Java to handle data processing and server operations",
+              "Front-End: React.js / Next.js / TailwindCSS / React Bootstrap",
+              "Back-End: Node.js / Java",
+              "Setup: GitHub / GitHub Actions",
             ]}
             imgSrc={portfolioImg}
             link="https://github.com/paulo-epi/portfolio-react"
           />
           <CompanyBlockRight
-            title="Full Stack / Mobile Developer - End of studies project"
-            subtitle="Lanterne | September 2022 - Now"
+            key={3}
+            title="Full-Stack / Mobile Developer - 09/2022 - 02/2025"
+            subtitle="Lanterne | Dublin, Ireland (Remote)"
             description={[
               "Create an application with an interactive map with a report button, emergency contacts and editable route filters",
-              "Mock-up of mobile project with Figma",
-              "iOS/Android mobile application development with Flutter",
-              "Website development with React",
-              "Front-End: Flutter / React",
+              "Designed mobile mock-up using Figma",
+              "Developed the mobile app with Flutter and the web version with React",
+              "Backend powered by Node.js and Firebase, with GitHub and Docker for setup and deployment",
+              "Front-End: Flutter / React.js",
               "Back-End: Node.js",
               "Setup: GitHub / Sonarqube / Jenkins / Docker",
               "Database: Firebase / Firestore"
@@ -49,6 +68,7 @@ const Experiences = () => {
             imgSrc={lanterneImg}
           />
           <CompanyBlockLeft
+            key={4}
             title="Invoicing Data Analyst - Internship"
             subtitle="Hardis Group | April - July 2023"
             description={[
@@ -61,7 +81,8 @@ const Experiences = () => {
             imgSrc={hardisImg}
           />
           <CompanyBlockRight
-            title="Full Stack / Mobile Developer - School project"
+            key={5}
+            title="Full-Stack / Mobile Developer - School project"
             subtitle="Epitech | January - February 2023"
             description={[
               "Create an application able to create action / reaction using external APIs",
@@ -78,6 +99,7 @@ const Experiences = () => {
             link="https://github.com/paulo-epi/Area-Epitech"
           />
           <CompanyBlockLeft
+            key={6}
             title="Project Manager - Internship"
             subtitle="CCI Grand Est | September - December 2021"
             description={[
