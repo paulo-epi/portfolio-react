@@ -15,21 +15,39 @@ import cppImg from "../../assets/icons/c++.png";
 import powerBiImg from "../../assets/icons/power-bi.png";
 import springBootImg from "../../assets/icons/spring-boot.png";
 import typescriptImg from "../../assets/icons/typescript.png";
+import phpImg from "../../assets/icons/php.png";
+import nextJSImg from "../../assets/icons/nextjs.svg";
+import tailwindcssImg from "../../assets/icons/tailwindcss.png";
 
 const my_skills = [
   {
-    title: "C",
-    img: cImg,
-    text: "",
-  },
-  {
-    title: "C++",
-    img: cppImg,
-    text: "",
-  },
-  {
     title: "React",
     img: reactImg,
+    text: "",
+  },
+  {
+    title: "Angular",
+    img: angularImg,
+    text: "",
+  },
+  {
+    title: "TypeScript",
+    img: typescriptImg,
+    text: "",
+  },
+  {
+    title: "Next.js",
+    img: nextJSImg,
+    text: "",
+  },
+  {
+    title: "Node.js",
+    img: nodeImg,
+    text: "",
+  },
+  {
+    title: "PHP",
+    img: phpImg,
     text: "",
   },
   {
@@ -43,13 +61,8 @@ const my_skills = [
     text: "",
   },
   {
-    title: "Angular",
-    img: angularImg,
-    text: "",
-  },
-  {
-    title: "Node.js",
-    img: nodeImg,
+    title: "Tailwind CSS",
+    img: tailwindcssImg,
     text: "",
   },
   {
@@ -68,11 +81,6 @@ const my_skills = [
     text: "",
   },
   {
-    title: "TypeScript",
-    img: typescriptImg,
-    text: "",
-  },
-  {
     title: "JavaScript",
     img: jsImg,
     text: "",
@@ -80,6 +88,16 @@ const my_skills = [
   {
     title: "Python",
     img: pythonImg,
+    text: "",
+  },
+  {
+    title: "C",
+    img: cImg,
+    text: "",
+  },
+  {
+    title: "C++",
+    img: cppImg,
     text: "",
   },
   {

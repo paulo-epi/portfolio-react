@@ -12,8 +12,8 @@ const CompanyBlockRight = ({ title, subtitle, description, imgSrc, link }) => {
         <span className="line"></span>
         <h4>{subtitle}</h4>
         <ul>
-          {description.map((item) => (
-            <li key={item.id}>{item}</li>
+          {description.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
         {link && (
