@@ -14,9 +14,14 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.0.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "typewriter-effect": "^2.21.0",
     "web-vitals": "^4.2.4"
+  },
+  "overrides": {
+    "http-proxy-middleware": "^2.0.9",
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31"
   },
   "scripts": {
     "start": "react-scripts start",
