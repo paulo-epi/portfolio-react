@@ -5,7 +5,7 @@ import svgr from 'vite-plugin-svgr';
 export default defineConfig({
   plugins: [react(), svgr()],
   server: {
-    port: 3000, // Garde le port 3000 comme CRA par défaut
+    port: 3000, // Keep port 3000 like CRA default
     open: true, // Opens the browser automatically
   },
   build: {
