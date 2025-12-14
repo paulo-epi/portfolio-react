@@ -9,6 +9,6 @@ export default defineConfig({
     open: true, // Opens the browser automatically
   },
   build: {
-    outDir: 'build', // CRA sort dans 'build', Vite par défaut dans 'dist' (optionnel)
+    outDir: 'build', // CRA outputs to 'build', Vite defaults to 'dist' (optional)
   },
 });
