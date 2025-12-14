@@ -1,4 +1,6 @@
 name: Deploy to cPanel via SSH
+permissions:
+  contents: read
 
 on:
   push:
