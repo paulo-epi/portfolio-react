@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react(), svgr()],
   server: {
     port: 3000, // Garde le port 3000 comme CRA par défaut
-    open: true, // Ouvre le navigateur automatiquement
+    open: true, // Opens the browser automatically
   },
   build: {
     outDir: 'build', // CRA sort dans 'build', Vite par défaut dans 'dist' (optionnel)
